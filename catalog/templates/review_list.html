@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Reviews</h1>
+
+{% for review in object_list %}
+
+<p>{{ review.body }}</p>
+<p>Book: {{ review.book.title }}</p>
+<p>Publisher: {{ review.book.publisher.name }}</p>
+
+<hr>
+
+{% endfor %}
+
+{% endblock %}
